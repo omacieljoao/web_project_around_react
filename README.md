@@ -15,17 +15,6 @@ Meu primeiro projeto em React. Adaptei o projeto **web_project_around** (HTML, C
 - JavaScript (ES6+)
 - HTML5 e CSS3 (metodologia BEM)
 
-## Como rodar localmente
-
-git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
-cd NOME-DO-REPOSITORIO
-npm install
-npm start
-
-## Demo
-
-[Link do deploy, se tiver]
-
 ## O que aprendi
 
 - Dividir a interface em componentes reutilizáveis
