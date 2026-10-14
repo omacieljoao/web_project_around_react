@@ -3,6 +3,29 @@ import NewCard from "./components/Popup/components/NewCard/NewCard";
 import EditProfile from "./components/Popup/components/EditProfile/EditProfile";
 import EditAvatar from "./components/Popup/components/EditAvatar/EditAvatar";
 import Popup from "./components/Popup/Popup";
+import Card from "../components/Main/components/Card/Card";
+import ImagePopup from "../components/Main/components/ImagePopup/ImagePopup";
+
+const cards = [
+  {
+    isLiked: false,
+    _id: "5d1f0611d321eb4bdcd707dd",
+    name: "Yosemite Valley",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
+    owner: "5d1f0611d321eb4bdcd707dd",
+    createdAt: "2019-07-05T08:10:57.741Z",
+  },
+  {
+    isLiked: false,
+    _id: "5d1f064ed321eb4bdcd707de",
+    name: "Lake Louise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg",
+    owner: "5d1f0611d321eb4bdcd707dd",
+    createdAt: "2019-07-05T08:11:58.324Z",
+  },
+];
+
+console.log(cards);
 
 function Main() {
   const [popup, setPopup] = useState(null);
@@ -13,6 +36,7 @@ function Main() {
     children: <EditProfile />,
   };
   const editAvatarPopup = { title: "Edit Avatar", children: <EditAvatar /> };
+  const imageComponent = { children: <ImagePopup /> };
 
   function handleOpenPopup(popup) {
     setPopup(popup);
@@ -55,7 +79,26 @@ function Main() {
           ></button>
         </section>
         <section className="cards page__section">
-          <ul className="cards__list"></ul>
+          <ul className="cards__list">
+            {cards.map((card) => (
+              <Card
+                key={card._id}
+                card={card}
+                handleOpenPopup={handleOpenPopup}
+                onClick={() =>
+                  handleOpenPopup({
+                    children: (
+                      <ImagePopup
+                        handleOpenPopup={handleOpenPopup}
+                        onClose={handleClosePopup}
+                        card={card}
+                      />
+                    ),
+                  })
+                }
+              />
+            ))}
+          </ul>
           <template id="card-template">
             <li className="card">
               <img className="card__image" />

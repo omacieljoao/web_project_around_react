@@ -11,7 +11,7 @@ export default function EditProfile() {
         type="text"
       />
       <span className="name-type-error popup-type-error">
-        Preencha esse acmpo.
+        Preencha esse campo.
       </span>
       <input
         required

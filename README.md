@@ -1,16 +1,33 @@
-# React + Vite
+# Around the U.S. (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Meu primeiro projeto em React. Adaptei o projeto **web_project_around** (HTML, CSS e JavaScript puro) para ser todo construído com componentes React.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Edição das informações do perfil (nome e sobre mim)
+- Adição de novos cards com foto e legenda
+- Curtir e remover cards
+- Popup para ampliar as imagens
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript (ES6+)
+- HTML5 e CSS3 (metodologia BEM)
 
-## Expanding the ESLint configuration
+## Como rodar localmente
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
+cd NOME-DO-REPOSITORIO
+npm install
+npm start
+
+## Demo
+
+[Link do deploy, se tiver]
+
+## O que aprendi
+
+- Dividir a interface em componentes reutilizáveis
+- Trabalhar com props e estado (useState)
+- Migrar um projeto em JS puro para React
