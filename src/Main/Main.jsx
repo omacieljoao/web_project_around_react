@@ -25,8 +25,6 @@ const cards = [
   },
 ];
 
-console.log(cards);
-
 function Main() {
   const [popup, setPopup] = useState(null);
 
@@ -36,7 +34,6 @@ function Main() {
     children: <EditProfile />,
   };
   const editAvatarPopup = { title: "Edit Avatar", children: <EditAvatar /> };
-  const imageComponent = { children: <ImagePopup /> };
 
   function handleOpenPopup(popup) {
     setPopup(popup);
@@ -99,24 +96,6 @@ function Main() {
               />
             ))}
           </ul>
-          <template id="card-template">
-            <li className="card">
-              <img className="card__image" />
-              <button
-                aria-label="Excluir cartão"
-                className="card__delete-button"
-                type="button"
-              ></button>
-              <div className="card__description">
-                <h2 className="card__title"></h2>
-                <button
-                  aria-label="Botão de curtir"
-                  className="card__like-button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-          </template>
         </section>
         {popup && (
           <Popup onClose={handleClosePopup} title={popup.title}>

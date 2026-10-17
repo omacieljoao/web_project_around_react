@@ -1,7 +1,7 @@
 import RemoveCard from "../RemoveCard/RemoveCard";
 
 export default function Card(props) {
-  const { name, link, isLiked } = props.card;
+  const { name, link } = props.card;
   const { onClick, handleOpenPopup } = props;
   const removeCard = {
     title: "Tem certeza?",
@@ -9,7 +9,7 @@ export default function Card(props) {
   };
   return (
     <li className="card">
-      <img className="card__image" src={link} alt="" onClick={onClick} />
+      <img className="card__image" src={link} alt={name} onClick={onClick} />
       <button
         aria-label="Delete card"
         className="card__delete-button"
